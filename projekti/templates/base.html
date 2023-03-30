@@ -1,0 +1,43 @@
+{% load static %}<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="{% static 'projekti/base.css' %}">
+  <title>{% block title %}Pauli-palalutejärjestelmä{% endblock %}</title>
+    {% block stylesheet %}
+    <style>
+    </style>
+    {% endblock %}  <!-- HERE -->
+  </head>
+  <body>
+    {% block body %}  <!-- HERE -->
+      <nav class="navbar-navbar-expand-lg">
+      <div class="navbar">
+          <a class="navbar-kuva" href="{% url 'home' %}"><img src={% static "projekti/images/paulilogo.jpg"%} alt="Logo" width="25%"></a>
+          <ul class= "valikko" style="list-style: none;">
+            <li><a class="navbar-brand" href="{% url 'home' %}">Kotisivu</a></li>
+            <li><a class="navbar-brand" href="{% url 'palautepauli:index' %}">Anna palautetta</a></li>
+            <li><a class="navbar-brand" href="{% url 'login' %}">Kirjaudu sisään</a></li>
+            <li><a class="navbar-brand" href="{% url 'signup' %}">Luo tunnus</a></li>
+          </ul>
+      </div>
+      </nav>
+      <div class="container-nonfluid">
+        <ol class="breadcrumb my-4">
+          {% block breadcrumb %}
+          {% endblock %}
+        </ol>
+        {% block content %}
+        {% endblock %}
+	{% block footer %}
+	<hr>
+	<footer>Pauli-palautejärjestelmä on asunto-osakeyhtiö Pihlajatorpan omistama palautejärjestelmä. Kaikki oikeudet pidätetään.</footer>
+	{% endblock footer %}
+      </div>
+    {% endblock body %}  <!-- AND HERE -->
+  </body>
+</html>

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Anna uusi palaute yhtiökokouksesta</h1>
+<form method="post">
+    {% csrf_token %}
+    <table>
+    {{ form.as_table }}
+    </table>
+    <button type="submit">Lähetä palaute</button>
+</form>
+<hr>
+<p><a href="{% url 'palautepauli:index' %}">Palaa aihevalikkoon</a></p>
+{% endblock %}

@@ -1,0 +1,76 @@
+body {
+    background-color:antiquewhite;
+}
+
+.container-nonfluid {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.container-fluid {
+    width: 100%;
+    text-align: center;
+}
+
+.valikko {
+    width: 100%;
+    margin: auto 0;
+    position: relative;
+    text-align: center;
+    padding-top: 2%;
+}
+
+.navbar-kuva {
+    position: relative;
+    margin: auto 0;
+    text-align: center;
+    width: 100%;
+}
+.navbar-navbar-expand-lg {
+    width: 100%;
+}
+
+.navbar {
+    background-color: white;
+    width: 100%;
+}
+
+a {
+    color: rgb(32, 16, 9);
+    font-size: 1.2em;
+}
+
+a:hover {
+    color:rgb(189, 57, 0);
+    font-size: 1,3em;
+}
+
+footer {
+    padding: 1%;
+}
+
+p {
+    color: rgb(32, 16, 9);
+    font-size: 1.2em;
+}
+
+form {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+td {
+    padding-top: 5%;
+    padding-left: 1%;
+}
+
+button {
+    display: inline-block;
+    margin: 0 auto;
+    width: 100%;
+    margin: 3%;
+    background-color: sandybrown;
+}

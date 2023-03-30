@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Valitse sopiva aihe:</h1>
+<p><a href="{% url 'palautepauli:talkoopalaute' %}">Anna palautetta talkoista</a></p>
+<p><a href="{% url 'palautepauli:kokouspalaute' %}">Anna palautetta yhtiökokouksesta</a></p>
+<p><a href="{% url 'palautepauli:hairioilmoitus' %}">Tee uusi häiriöilmoitus</a></p>
+<!-- {% if posts %}
+<h2>Posts</h2>
+<ul>
+    {% for post in posts %}
+        <li><strong>{{ post.author }} {{ post.date }}</strong><br>
+            {{ post.comment|linebreaks }}
+        </li>
+    {% endfor %}
+</ul>
+{% else %}
+    <p>No posts were found.</p>
+{% endif %} -->
+
+{% endblock %}
+
+<!-- tähän tulee ainoastaan linkit palautteenantosivuille -->

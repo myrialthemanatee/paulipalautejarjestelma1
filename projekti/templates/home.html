@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Kotisivu</h1>
+{% if user.is_authenticated %}
+    <p>Olet kirjautunut sisään tunnuksella {{ user }}</p>
+    <p><a href="{% url 'logout' %}">Kirjaudu ulos</a></p>
+{% else %}
+    <p>Sinun täytyy olla kirjautunut sisään antaaksesi palautetta.</p>
+    <p><a href="{% url 'login' %}">Kirjaudu sisään</a></p>
+    <p><a href="{% url 'signup' %}">Uusi asukas? Luo tunnus!</a></p>
+{% endif %}
+<h2>Palautejärjestelmä:</h2>
+    <p><a href="{% url 'palautepauli:index' %}">Siirry valitsemaan aihe</a></p>
+{% endblock %}
